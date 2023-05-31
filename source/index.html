@@ -23,28 +23,51 @@
           </div>
 
           <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link"> Главная </a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link"> Фото и видео </a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link"> Форма Отзыва </a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link"> Young Coder School </a>
-            </li>
+            <button class="main-menu__close">
+              <span class="visually-hidden"> закрыть меню </span>
+            </button>
+            <div class="main-menu__container">
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link main-menu__link--link">
+                  Главная
+                </a>
+              </li>
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link"> Фото и видео </a>
+              </li>
+            </div>
+            <div class="main-menu__container">
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link"> Форма Отзыва </a>
+              </li>
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link"> контакты</a>
+              </li>
+            </div>
           </ul>
         </nav>
         <button class="main-header__button">
-          <span class="visually-hidden">меню</span>
+          <span class="visually-hidden">меню </span>
         </button>
       </div>
     </header>
     <main class="main-content">
       <section class="first-screen">
-        <img class="" src="img/Frame 7.png" alt="седона" />
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            width="100%"
+            srcset="img/intro-desktop.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            width="100%"
+            srcset="img/Intro.jpg"
+          />
+
+          <img class="first-screen__image" src="img/Frame 7.png" alt="седона" />
+        </picture>
+
         <p class="first-screen__main-text">
           СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!
         </p>
@@ -56,22 +79,37 @@
         <h2 class="visually-hidden">предложения</h2>
         <ul class="benefits__list">
           <li class="benefits__item benefit">
-            <div class="benefit__general-information-container">
-              <div class="benefit__text-container">
-                <p class="benefit__text">НАСТОЯЩИЙ ГОРОДОК</p>
+            <div
+              class="benefit__general-information-container benefit__general-information-container--first"
+            >
+              <div
+                class="benefit__text-container benefit__text-container--first"
+              >
+                <p class="benefit__title">НАСТОЯЩИЙ ГОРОДОК</p>
                 <p class="benefit__text">— №1 —</p>
                 <p class="benefit__text">
                   СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
                 </p>
               </div>
 
-              <img
-                class="benefit__image"
-                src="img/photo-city@1x 1.jpg"
-                alt="фото города."
-                width="320"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  width="800px"
+                  srcset="img/photo-city-desktop.jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  width="512px"
+                  srcset="img/photo-city@1x.jpg"
+                />
+
+                <img
+                  class="benefit__image benefit__image--right"
+                  src="img/photo-city@1x 1.jpg"
+                  alt="фото города."
+                />
+              </picture>
             </div>
 
             <div class="benefit__discription-container benefit-discription">
@@ -99,7 +137,9 @@
           </li>
           <li class="benefits__item benefit">
             <div class="benefit__general-information-container">
-              <div class="benefit__text-container">
+              <div
+                class="benefit__text-container benefit__text-container--right"
+              >
                 <p class="benefit__text">ТАМ ЕСТЬ Мост дьявола</p>
                 <p class="benefit__text">— №2 —</p>
                 <p class="benefit__text">
@@ -107,63 +147,80 @@
                 </p>
               </div>
 
-              <img
-                class="benefit__image"
-                src="img/photo-bridge@1x 1.jpg"
-                alt="фото скал."
-                width="320px"
-                height="260px"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  width="100%"
+                  srcset="img/photo-bridge.jpg"
+                />
+
+                <img
+                  class="benefit__image benefit__image--left"
+                  src="img/photo-bridge@1x 1.jpg"
+                  alt="фото скал."
+                  width="320px"
+                />
+              </picture>
             </div>
           </li>
-          <li class="benefits__item benefit">
-            <div class="benefit__general-information-container">
-              <div class="benefit__text-container">
+          <div class="benefit__tablet-container">
+            <li class="benefits__item benefit">
+              <div
+                class="benefit__text-container benefit__text-container--gray"
+              >
                 <p class="benefit__text">НЕБОЛЬШАЯ ПЛОЩАДЬ</p>
                 <p class="benefit__text">— №3 —</p>
                 <p class="benefit__text">
                   ВСЕ интересные места находятся очень близко
                 </p>
               </div>
-            </div>
-          </li>
-          <li class="benefits__item benefit">
-            <div class="benefit__general-information-container">
-              <div class="benefit__text-container">
+            </li>
+            <li class="benefits__item benefit">
+              <div
+                class="benefit__text-container benefit__text-container--gray"
+              >
                 <p class="benefit__text">КРАСИВАЯ ДОРОГА</p>
                 <p class="benefit__text">— №4 —</p>
                 <p class="benefit__text">
                   ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
                 </p>
               </div>
-            </div>
-          </li>
-          <li class="benefits__item benefit">
-            <div class="benefit__general-information-container">
-              <div class="benefit__text-container">
+            </li>
+            <li class="benefits__item benefit">
+              <div
+                class="benefit__text-container benefit__text-container--gray benefit__text-container--gray-last"
+              >
                 <p class="benefit__text">МАЛО ТУРИСТОВ</p>
                 <p class="benefit__text">— №5 —</p>
                 <p class="benefit__text">
                   Большинство едет в гранд каньони толпится там
                 </p>
               </div>
-            </div>
-          </li>
+            </li>
+          </div>
         </ul>
       </section>
-      <section class="ca-block">
+      <section class="ca-block container">
         <h2 class="ca-block__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
-        <p class="ca-block__textS">
+        <p class="ca-block__text">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в седоне
         </p>
         <button class="ca-block__button">Найти Гостиницу</button>
       </section>
       <section class="map">
-        <img src="img/map-mobile.jpg.jpg" alt="карта" />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381185.7178681847!2d-114.1737879825404!3d34.14789816713015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08ebcb4c186b%3A0x423927b17fc1cd71!2z0JDRgNC40LfQvtC90LAsINCh0KjQkA!5e0!3m2!1sru!2sch!4v1678898389404!5m2!1sru!2sch"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <p class="main-footer__text">#visitSEDONA</p>
       <ul class="main-footer__list">
         <li class="main-footer__item">
@@ -196,8 +253,9 @@
       </ul>
       <div class="main-footer__author author">
         <p class="author__text">Разработано</p>
-        <img class="author__img" src="img/logo (2).svg" alt="логотип" />
+        <img class="author__img" src="img/Group (3).svg" alt="логотип" />
       </div>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>

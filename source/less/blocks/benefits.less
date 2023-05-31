@@ -1,3 +1,119 @@
-.benefits__list{
+.benefits__list {
   .list-none();
 }
+.benefit__text-container {
+  text-align: center;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+
+  text-transform: uppercase;
+  padding-top: 54px;
+  padding-bottom: 40px;
+
+  color: white;
+  background-color: #81b3d2;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  &--first {
+    &::after {
+      .defaul-pseudo-element(100vw,37px);
+      background: url("../../img/Group\ 4\ \(1\).svg") no-repeat;
+      top: 0;
+      background-size: cover;
+      left: 0;
+      z-index: 1;
+      @media (min-width: @tablet-size) {
+        content: none;
+      }
+    }
+
+
+  }
+  &--right {
+    order: 1;
+  }
+  &--gray {
+    box-sizing: border-box;
+    height: 100%;
+    border-bottom: 1px solid #d6d6d6;
+    background-color: #eeeeee;
+    color: #000000;
+    &-last {
+      border: none;
+    }
+  }
+}
+.benefit__text {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
+
+  max-width: 80%;
+  margin: 0 auto;
+  width: fit-content;
+  @media (min-width: @tablet-size) {
+  }
+}
+.benefit__title {
+  .margin-bottom(11px);
+}
+.benefit__image {
+  width: 100%;
+
+  margin: 0 auto;
+  display: block;
+}
+
+  @media (min-width: @tablet-size) {
+    height: 100%;
+    max-width: none;
+
+    order: -1;
+    &--right {
+      order: 1;
+      display: flex;
+    }
+  }
+  @media (min-width: @desktop-size) {
+
+
+}
+.benefit__general-information-container {
+
+
+  @media (min-width: @tablet-size) {
+    display: grid;
+    height: 256px;
+    grid-template-columns:  2.5fr 1fr;
+    &--first {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+    }
+    overflow: hidden;
+  }
+
+}
+.benefit__tablet-container {
+  @media (min-width: @tablet-size) {
+    display: flex;
+  }
+  @media (min-width: @desktop-size) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+ & .benefit {
+  width: 100%;
+ }
+ & .benefit__text-container {
+  width: 100%;
+ }
+  }
+}
+

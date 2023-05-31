@@ -1,0 +1,95 @@
+.benefit-discription__list {
+  .list-none();
+  padding-left: 48px;
+  @media (min-width: @tablet-size) {
+    & {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    padding: 0;
+  }
+}
+.benefit-discription {
+  .wrapper(18px);
+  padding-top: 31px;
+  padding-bottom: 52px;
+  @media (min-width: @tablet-size) {
+    max-width: 885px;
+    box-sizing: border-box;
+  }
+
+}
+.benefit-discription__title {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+
+  text-transform: uppercase;
+
+  color: #000000;
+  .margin-bottom(16px);
+  @media (min-width: @tablet-size) {
+    font-size: 21px;
+  }
+}
+.benefit-discription__text {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  text-transform: uppercase;
+
+  color: #333333;
+  margin: 0;
+  @media (min-width: @tablet-size) {
+    font-size: 21px;
+  }
+  
+}
+.benefit-disription__item {
+  &::before {
+    .defaul-pseudo-element(40px);
+    left: -48px;
+    top: -10px;
+    background-size: contain;
+    @media (min-width: @tablet-size) {
+      width: 75px;
+      height: 72px;
+      top: 0;
+      .centering-width-pseudo-element();
+    }
+  }
+  &:nth-child(1) {
+    &::before {
+      background: url(../../img/icon-house.svg.svg) no-repeat center center;
+      background-size: contain;
+    }
+  }
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &:nth-child(2) {
+    &::before {
+      background: url(../../img/icon-burger.svg.svg) no-repeat center center;
+      background-size: contain;
+    }
+  }
+  &:nth-child(3) {
+    &::before {
+      background: url(../../img/icon-gift.svg.svg) no-repeat center center;
+      background-size: contain;
+    }
+  }
+  @media (min-width: @tablet-size) {
+    text-align: center;
+    padding-top: 60px;
+    padding-top: 98px;
+  }
+}
+

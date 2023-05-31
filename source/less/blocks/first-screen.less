@@ -9,6 +9,18 @@
   text-transform: uppercase;
   margin-bottom: 35px;
   color: #000000;
+  @media (min-width: @tablet-size) {
+    font-size: 21px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 47.5px;
+  }
+  @media (min-width : @desktop-size) {
+
+    max-width: 483px;
+}
+
 }
 .first-screen__text {
   font-family: "PT Sans";
@@ -21,10 +33,50 @@
   text-transform: uppercase;
 
   color: #333333;
+  @media (min-width: @tablet-size) {
+    font-size: 14px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 56.5px;
+  }
+  @media (min-width : @desktop-size) {
+
+    max-width: 483px;
+}
+
 }
 .first-screen {
   padding-bottom: 16px;
 }
 .first-screen__img {
   margin-bottom: 32px;
+}
+.first-screen__image {
+  width: 100%;
+
+  display: block;
+  margin: 0 auto;
+  @media (min-width: @tablet-size) {
+
+    &--tablet {
+      display: block;
+      width: 100%;
+
+    }
+
+  }
+  @media (min-width : @desktop-size) {
+
+    &--tablet {
+      display: none;
+      width: 100%;
+
+    }
+    &--desktop {
+      width: 100%;
+    }
+}
+
 }

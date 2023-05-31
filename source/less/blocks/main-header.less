@@ -3,6 +3,19 @@
   position: relative;
   padding: 17px 0px;
   box-sizing: border-box;
+  max-width: 500px;
+  margin: 0 auto;
+  & .container {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  @media (min-width: @tablet-size) {
+    max-width: 885px;
+  }
+  @media (min-width : @desktop-size) {
+    max-width: 100vw ;
+
+  }
 }
 .main-header__button {
   .button-none();
@@ -12,4 +25,9 @@
   cursor: pointer;
   margin-left: auto;
   display: block;
+
+
+  @media (min-width: @tablet-size) {
+    display: none;
+  }
 }
